@@ -35,7 +35,7 @@ Public Class FrmMtSocios
 
     Private Sub ImprimirToolStripButton_Click(sender As Object, e As EventArgs) Handles ImprimirToolStripButton.Click
         Dim visor = New FrmVisor()
-        Dim param As New ReportParameter("NSocio", CType(cmbSocios.SelectedValue, String))
+        Dim param = New ReportParameter("NSocio", CType(cmbSocios.SelectedValue, String))
         visor.ReportViewer1.LocalReport.SetParameters(param)
         visor.ShowDialog()
     End Sub
